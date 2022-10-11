@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Coding Quiz Challenge</h1>
+        <h2 class="time"></h2>
+    </header>
+    
+    <div class="questions">
+        <h3 id="qContent">Question Goes Here</h3>
+        <div id="aContent" class="answers">
+            <p class="answerButton" id="optionA" onclick="checkAnswer('A')">some answer text</p>
+            <p class="answerButton" id="optionB" onclick="checkAnswer('B')">some answer text</p>
+            <p class="answerButton" id="optionC" onclick="checkAnswer('C')">some answer text</p>
+            <p class="answerButton" id="optionD" onclick="checkAnswer('D')">some answer text</p>
+        </div>
+        <div class="scoreOverlay">
+            <div class="scorewrapper">
+            <p>Your Score</p>
+            <p>Correct:</p>
+            <h3 id="numberCorrect" >0</h3>
+            <p>Incorrect:</p>
+            <h3 id="numberWrong">0</h3>
+            </div>
+            <div class="highScore">
+                <h4>Save you score?</h4>
+            <form>
+                <input type="text" class="holdScore" placeholder="Enter your initials" id="initials" value="MR">
+                <button id="saveScore">Save Score</button>
+            </form>
+            <div class="displayHighScore">
+                <h4>High Scores!</h4>
+                <ol class='test' id="allScores"></ol>
+                
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="start">
+        <button id="startBtn">Start Quiz</button>
+    </div>
+    
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
