@@ -43,7 +43,7 @@ header {
 .scoreOverlay{
     display: flex;
     position: absolute;
-    background: blue;
+    background: red;
     height: 100%;
     width: 60%;
 }

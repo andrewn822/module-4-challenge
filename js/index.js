@@ -1,19 +1,20 @@
-let body = document.body
-let startButton = document.getElementById('startBtn')
-let qDisplay = document.getElementById('qContent')
-let pickA = document.getElementById('optionA')
-let pickB = document.getElementById('optionB')
-let pickC = document.getElementById('optionC')
-let pickD = document.getElementById('optionD')
-let score = 0
-let secondsLeft = 90
-let save = document.getElementById('saveScore')
-let initialsInput = document.getElementById('initials')
-let initialsSaved = ''
-let scoreSaver = document.querySelector('.highScore')
-let highScores = document.querySelector('.test')
+// global variables 
+var body = document.body
+var startButton = document.getElementById('startBtn')
+var qDisplay = document.getElementById('qContent')
+var pickA = document.getElementById('optionA')
+var pickB = document.getElementById('optionB')
+var pickC = document.getElementById('optionC')
+var pickD = document.getElementById('optionD')
+var score = 0
+var secondsLeft = 90
+var save = document.getElementById('saveScore')
+var initialsInput = document.getElementById('initials')
+var initialsSaved = ''
+var scoreSaver = document.querySelector('.highScore')
+var highScores = document.querySelector('.test')
 
-
+// highscore leaderboard
 function saveclick(event){
     event.preventDefault()
     
@@ -21,21 +22,22 @@ function saveclick(event){
     initialsSaved = initialsInput.value
     scoreSaver.setAttribute('style', 'display: block;')
 
-    let addScore = document.createElement('li')
+    var addScore = document.createElement('li')
     addScore.textContent = initialsSaved
 
     highScores.appendChild(addScore)
 
 
 }
-
-let messageScore = function(){
+// scores from test taken
+var messageScore = function(){
     document.querySelector('.scoreOverlay').setAttribute('style', 'display: flex;')
     document.getElementById('numberCorrect').textContent = score;
     document.getElementById('numberWrong').textContent = ((qArray.length)-(score))
     
 }
 
+// display quiz questions and answer choices 
 function renderQuestions(){
     document.querySelector('.questions').setAttribute('style', 'visibility: visible;')
     currenQuestion = qArray[setQuestion]
@@ -48,8 +50,8 @@ function renderQuestions(){
     return;
 }
 
-
-let qArray = [
+// list/array of questions 3 of them
+var qArray = [
     {
         question: "What does JS stand for?",
         choiceA: "Javascript",
@@ -61,9 +63,9 @@ let qArray = [
     },{
         question: "All of the following can be used to declare a variable EXCEPT",
         choiceA: "const",
-        choiceB: "let",
+        choiceB: "var",
         choiceC: "var",
-        choiceD: "myVariable",
+        choiceD: "myvariable",
         correct: "D"
     },{
         question: "Where should the <script></script> go in the HTML document?",
@@ -75,10 +77,11 @@ let qArray = [
     }
 ]
 
-let setQuestion = 0
-let currenQuestion = []
+// variables for what question and array of question choices
+var setQuestion = 0
+var currenQuestion = []
 
-
+// function for right or wrong answers if/else statements
 function checkAnswer(value){
     
     currenQuestion = qArray[setQuestion]
@@ -104,14 +107,15 @@ function checkAnswer(value){
 }
 
 
-let timer = document.querySelector('.time')
+var timer = document.querySelector('.time')
 
+// controls the start of the game and what content is shown based on secondsleft or if you complete the quiz show score
 function beginGame(){
     
     document.querySelector('.scoreOverlay').setAttribute('style', 'display: none;')
     setQuestion = 0
     score = 0
-    let timerInterval = setInterval(function(){
+    var timerInterval = setInterval(function(){
         secondsLeft--;
         timer.textContent = "Time left: " + secondsLeft
 

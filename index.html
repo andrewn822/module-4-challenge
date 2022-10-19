@@ -7,12 +7,14 @@
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
+<!-- body/main section -->
 <body>
     <header>
         <h1>Coding Quiz Challenge</h1>
         <h2 class="time"></h2>
     </header>
-    
+    <!-- question content -->
     <div class="questions">
         <h3 id="qContent">Question Goes Here</h3>
         <div id="aContent" class="answers">
@@ -21,6 +23,7 @@
             <p class="answerButton" id="optionC" onclick="checkAnswer('C')">some answer text</p>
             <p class="answerButton" id="optionD" onclick="checkAnswer('D')">some answer text</p>
         </div>
+        <!-- score content -->
         <div class="scoreOverlay">
             <div class="scorewrapper">
             <p>Your Score</p>
@@ -32,7 +35,8 @@
             <div class="highScore">
                 <h4>Save you score?</h4>
             <form>
-                <input type="text" class="holdScore" placeholder="Enter your initials" id="initials" value="MR">
+                <!-- name saver -->
+                <input type="text" class="holdScore" placeholder="Name" id="initials" >
                 <button id="saveScore">Save Score</button>
             </form>
             <div class="displayHighScore">
