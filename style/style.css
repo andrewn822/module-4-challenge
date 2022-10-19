@@ -46,6 +46,7 @@ header {
     background: red;
     height: 100%;
     width: 60%;
+    overflow: hidden;
 }
 
 .scorewrapper{
@@ -60,4 +61,8 @@ header {
 
 .answerButton:hover{
     transform: scale(0.85);
+}
+
+ol {
+
 }

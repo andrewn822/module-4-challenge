@@ -26,7 +26,7 @@ function saveclick(event){
     addScore.textContent = initialsSaved
 
     highScores.appendChild(addScore)
-
+    
 
 }
 // scores from test taken
